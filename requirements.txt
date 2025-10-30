@@ -1,0 +1,7 @@
+pandas
+scikit-learn
+tensorflow
+matplotlib
+seaborn
+Flask
+werkzeug

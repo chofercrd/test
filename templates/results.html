@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Results</title>
+</head>
+<body>
+    <h1>Descriptive Statistics</h1>
+    <div>{{ stats|safe }}</div>
+
+    <h1>Visualizations</h1>
+    {% for image in images %}
+        <img src="{{ url_for('static', filename=image) }}" alt="Plot">
+    {% endfor %}
+
+    <h1>Model Evaluation</h1>
+    <p>Test Loss: {{ loss }}</p>
+    <p>Test Accuracy: {{ accuracy }}</p>
+</body>
+</html>

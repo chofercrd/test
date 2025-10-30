@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Select Target Column</title>
+</head>
+<body>
+    <h1>Select the Target Column</h1>
+    <form action="/process" method="post">
+        <input type="hidden" name="filename" value="{{ filename }}">
+        <label for="target_column">Target Column:</label>
+        <select name="target_column" id="target_column">
+            {% for column in columns %}
+                <option value="{{ column }}">{{ column }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Process">
+    </form>
+</body>
+</html>
